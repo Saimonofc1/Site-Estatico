@@ -13,20 +13,17 @@
 
 
 @media only screen and (max-width: 768px) {
+
   .navbar {
-  font-size: 12px;
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
-  
+
   .navbar li {
-  display: block;
-  text-align: center;
-  margin: 0;
-  padding: 10px 0;
-  }
-  
-  .navbar li a {
-  display: inline-block;
-  padding: 5px;
+    float: none;
   }
   
   header {
