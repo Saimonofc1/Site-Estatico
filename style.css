@@ -1,446 +1,469 @@
 *{
-    padding: 0;
+ padding: 0;
+ margin: 0;
+
+}
+
+/* Navbar styles */
+.navbar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  font-size: 15px;
+  color: #fff;
+  font-weight: bold;
+  overflow: hidden;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  text-shadow: black 0.1em 0.1em 0.2em;
+}
+nav ul {
+  display: flex;
+  justify-content: center;
+}
+.navbar li {
+  display: inline-block;
+  margin: 0;
+
+  align-items: center;
+}
+
+.navbar li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  
+}
+
+.navbar li a:hover {
+  
+  color: #f5a623;
+}
+
+
+
+
+/* Media query for responsive navbar */
+@media (max-width: 768px) {
+    /* Reduz a fonte dos títulos */
+    h2 {
+      font-size: 24px;
+    }
+  
+    /* Reduz a fonte dos parágrafos */
+    p {
+      font-size: 16px;
+    }
+  .navbar {
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .navbar li {
+    float: none;
+  }
+  
+}
+@media screen and (max-width: 768px) {
+  .imgModal img {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+}
+
+body {
+    background-image: url(./img/fundoprincipal.jpg);
+    background-repeat: no-repeat ;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+    font-family: Arial, sans-serif;
     margin: 0;
-   
-   }
-   
-   /* Navbar styles */
-   .navbar {
-     list-style-type: none;
-     margin: 0;
-     padding: 0;
-     font-size: 15px;
-     color: #fff;
-     font-weight: bold;
-     overflow: hidden;
-     text-decoration: none;
-     transition: all 0.3s ease-in-out;
-     overflow-wrap: break-word;
-     word-wrap: break-word;
-     text-shadow: black 0.1em 0.1em 0.2em;
-   }
-   nav ul {
-     display: flex;
-     justify-content: center;
-   }
-   .navbar li {
-     display: inline-block;
-     margin: 0;
-   
-     align-items: center;
-   }
-   
-   .navbar li a {
-     display: block;
-     color: white;
-     text-align: center;
-     padding: 14px 16px;
-     text-decoration: none;
-     
-   }
-   
-   .navbar li a:hover {
-     
-     color: #f5a623;
-   }
-   
-   /* Media query for responsive navbar */
-   @media (max-width: 768px) {
-       /* Reduz a fonte dos títulos */
-       h2 {
-         font-size: 24px;
-       }
-     
-       /* Reduz a fonte dos parágrafos */
-       p {
-         font-size: 16px;
-       }
-     .navbar {
-       display: flex;
-       padding: 10px;
-       flex-direction: column;
-       justify-content: center;
-       align-items: center;
-     }
-     
-     .navbar li {
-       float: none;
-     }
-   }
-   
-   body {
-       background-image: url(./img/fundoprincipal.jpg);
-       background-repeat: no-repeat ;
-       background-size: cover;
-       background-position: center;
-       z-index: -1;
-       font-family: Arial, sans-serif;
-       margin: 0;
-       padding: 0;
-     }
-   
-     
-     header {
-   
-       background-image: url(./img/fundoprincipal.jpg);
-       background-repeat: no-repeat ;
-       background-position: center;
-       background-size: cover;
-       color: #fff;
-       padding: 10px;
-     }
-       
-     #main-heading {
-       
-       color: #fff;
-       font-size: 36px;
-       margin: 0;
-       text-align: center;
-     }
-   
-     h1 {
-       margin: 0;
-      
-     }
-   
-     .titlee{
-       font-family: Arial, sans-serif;
-       text-align: center;
-       font-size: 26px;
-       margin-top: 5px;
-       overflow-wrap: break-word;
-       word-wrap: break-word;
-       text-shadow: black 0.1em 0.1em 0.2em;
-     }
-     
-   
-     
-     main {
-       padding: 20px;
-     }
-   
-     section {
-       margin-bottom: 40px;
-     }
-   
-     .trigger{
-         display: inline-block;
-         background-color: #333;
-         color: #fff;
-         text-decoration: none;
-         padding: 10px;
-         border-radius: 5px;
-         margin-top: 10px;
-         cursor: pointer;
-       }
-        .trigger:hover{
-         background-color: #555;
-        }
-     /* modal */
-     .modal{
-       z-index:1;
-       position: fixed;
-       top:0;
-       left:0;
-       padding:0;
-       display: flex;
-       justify-content: center;
-       align-items: center;
-       width: 100%;
-       height: 100%;
-       background-color: rgba(0,0,0,0.5);
-       opacity: 0;
-       visibility: hidden;
-       transform: scale(1.1);
-       transition: visibility 0.25s ease-in-out , opacity 0.25s ease-in-out, transform 0.25s ease-in-out;   
-   }
-   .modal-content{
-       
-     background-color: white;
-     padding: 16px 24px;    
-     width: 384px;
-     border-radius: 0.5rem;
-   }
-   .show-modal{
-     opacity: 1;
-     visibility: visible;
-     transform: scale(1.0);    
-   }
-    /* modalP */
-   .modalP{
-     z-index:1;
-     position: fixed;
-     top:0;
-     left:0;
-     padding:0;
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     width: 100%;
-     height: 100%;
-     background-color: rgba(0,0,0,0.5);
-     opacity: 0;
-     visibility: hidden;
-     transform: scale(1.1);
-     transition: visibility 0.25s ease-in-out , opacity 0.25s ease-in-out, transform 0.25s ease-in-out;   
-   }
-   .modalP-content{
-     
-   background-color: white;
-   padding: 16px 24px;    
-   width: 384px;
-   border-radius: 0.5rem;
-   }
-   .show-modalP{
-   opacity: 1;
-   visibility: visible;
-   transform: scale(1.0);    
-   }
-    /* modal1 */
-   .modal1{
-     z-index:1;
-     position: fixed;
-     top:0;
-     left:0;
-     padding:0;
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     width: 100%;
-     height: 100%;
-     background-color: rgba(0,0,0,0.5);
-     opacity: 0;
-     visibility: hidden;
-     transform: scale(1.1);
-     transition: visibility 0.25s ease-in-out , opacity 0.25s ease-in-out, transform 0.25s ease-in-out;   
-   }
-   .modal1-content{
-       
-     background-color: white;
-     padding: 16px 24px;    
-     width: 384px;
-     border-radius: 0.5rem;
-   }
-   .show-modal1{
-     opacity: 1;
-     visibility: visible;
-     transform: scale(1.0);    
-   }
-    /* modal3 */
-   .modal3{
-     z-index:1;
-     position: fixed;
-     top:0;
-     left:0;
-     padding:0;
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     width: 100%;
-     height: 100%;
-     background-color: rgba(0,0,0,0.5);
-     opacity: 0;
-     visibility: hidden;
-     transform: scale(1.1);
-     transition: visibility 0.25s ease-in-out , opacity 0.25s ease-in-out, transform 0.25s ease-in-out;   
-   }
-   .modal3-content{
-       
-     background-color: white;
-     padding: 16px 24px;    
-     width: 384px;
-     border-radius: 0.5rem;
-   }
-   .show-modal3{
-     opacity: 1;
-     visibility: visible;
-     transform: scale(1.0);    
-   }
-    /* modal4 */
-   .modal4{
-     z-index:1;
-     position: fixed;
-     top:0;
-     left:0;
-     padding:0;
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     width: 100%;
-     height: 100%;
-     background-color: rgba(0,0,0,0.5);
-     opacity: 0;
-     visibility: hidden;
-     transform: scale(1.1);
-     transition: visibility 0.25s ease-in-out , opacity 0.25s ease-in-out, transform 0.25s ease-in-out;   
-   }
-   .modal4-content{
-       
-     background-color: white;
-     padding: 16px 24px;    
-     width: 384px;
-     border-radius: 0.5rem;
-   }
-   .show-modal4{
-     opacity: 1;
-     visibility: visible;
-     transform: scale(1.0);    
-   }
-   
-   
-   
-   
-   
-   
-   
-   
-   .close-button{
-      float: right;
-      width: 24px;
-      line-height: 24px;
-      text-align: center;
-      cursor: pointer;
-      border-radius: 0.25rem;
-      background-color: lightgray;
-   }
-   .close-button:hover{
-       background-color: darkgray;
-   }
-   
-   
+    padding: 0;
     
+  }
+
+  
+  header {
+
+    background-image: url(./img/fundoprincipal.jpg);
+    background-repeat: no-repeat ;
+    background-position: center;
+    background-size: cover;
+    color: #fff;
+    padding: 10px;
+  }
+    
+  #main-heading {
+    
+    color: #fff;
+    font-size: 36px;
+    margin: 0;
+    text-align: center;
+  }
+
+  h1 {
+    margin-top: 10px;
+    margin-bottom: 10px;
    
-   
-     .btn-saiba-mais {
-       display: inline-block;
-       background-color: #333;
-       color: #fff;
-       text-decoration: none;
-       padding: 10px;
-       border-radius: 5px;
-       margin-top: 10px;
-       cursor: pointer;
+  }
+  .titlee{
+    font-family: Arial, sans-serif;
+    text-align: center;
+    font-size: 26px;
+    margin-top: 5px;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    text-shadow: black 0.1em 0.1em 0.2em;
+  }
+  
+
+  
+  main {
+    padding: 20px;
+  }
+
+  section {
+    margin-bottom: 40px;
+  }
+
+  .trigger{
+      display: inline-block;
+      background-color: #333;
+      color: #fff;
+      text-decoration: none;
+      padding: 10px;
+      border-radius: 5px;
+      margin-top: 10px;
+      cursor: pointer;
+    }
+     .trigger:hover{
+      background-color: #555;
      }
-     
-     .btn-saiba-mais:hover {
-       background-color: #555;
-     }
-     
-     .info-saiba-mais {
-       display: none;
-       background-color: #eee;
-       padding: 10px;
-       margin-top: 10px;
-       border-radius: 5px;
-     }
-     
-     .info-saiba-mais p {
-       margin: 0;
-     }
-   
-   
-     h2 {
-       font-size: 28px;
-       margin-bottom: 10px;
-       color: #333;
-     }
-     
-     p {
-       font-size: 18px;
-       line-height: 1.5;
-       color: #666;
-     }
-     
-     /* Estilos para a seção "Git" */
-     #git {
-       background-color: #f5f5f5;
-       padding: 40px;
-     }
-     
-     #git h2 {
-       color: #333;
-     }
-     
-     #git p {
-       color: #666;
-     }
-     
-     /* Estilos para a seção "Gitflow" */
-     #gitflow {
-       background-color: #f0f0f0;
-       padding: 40px;
-     }
-     
-     #gitflow h2 {
-       color: #333;
-     }
-     
-     #gitflow p {
-       color: #666;
-     }
-     
-     /* Estilos para a seção "Docker" */
-     #docker {
-       background-color: #e5e5e5;
-       padding: 40px;
-     }
-     
-     #docker h2 {
-       color: #333;
-     }
-     
-     #docker p {
-       color: #666;
-     }
-     
-     /* Estilos para a seção "CI/CD" */
-     #cicd {
-       background-color: #e0e0e0;
-       padding: 40px;
-     }
-     
-     #cicd h2 {
-       color: #333;
-     }
-     
-     #cicd p {
-       color: #666;
-     }
-     
-     /* Estilos para a seção "Computação em Nuvem" */
-     #computacao-nuvem {
-       background-color: #d5d5d5;
-       padding: 40px;
-     }
-     
-     #computacao-nuvem h2 {
-       color: #333;
-     }
-     
-     #computacao-nuvem p {
-       color: #666;
-     }
-     
-     p {
-       font-size: 18px;
-       line-height: 1.5;
-     }
-   
-   
-   
-   
-   
-     footer {
-       background-color: #333;
-       color: #fff;
-       padding: 10px 20px;
-       text-align: center;
-     }
-   
-     footer p {
-       margin: 0;
-     }
-     
-   
-   
-   
+  /* modal */
+.imgModal img {
+  width:70%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+  .modal{
+    z-index:1;
+    position: fixed;
+    top:0;
+    left:0;
+    padding:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1.1);
+    transition: visibility 0.25s ease-in-out , opacity 0.25s ease-in-out, transform 0.25s ease-in-out;   
+}
+.modal-content{
+    
+  overflow-y:scroll;
+  width: 90%;
+  height: 90%;
+  line-height: 1.5;
+  padding: 16px 80px;    
+  border-radius: 0.7rem;
+  
+}
+.show-modal{
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1.0);    
+}
+ /* modalP */
+.modalP{
+  z-index:1;
+  position: fixed;
+  top:0;
+  left:0;
+  padding:0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(1.1);
+  transition: visibility 0.25s ease-in-out , opacity 0.25s ease-in-out, transform 0.25s ease-in-out;   
+}
+.modalP-content{
+overflow:auto;
+width: 90%;
+height: 90%;
+line-height: 1.5;
+padding: 16px 80px;    
+border-radius: 0.7rem;
+}
+.show-modalP{
+opacity: 1;
+visibility: visible;
+transform: scale(1.0);    
+}
+ /* modal1 */
+.modal1{
+  z-index:1;
+  position: fixed;
+  top:0;
+  left:0;
+  padding:0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(1.1);
+  transition: visibility 0.25s ease-in-out , opacity 0.25s ease-in-out, transform 0.25s ease-in-out;   
+}
+.modal1-content{
+    
+  overflow:auto;
+  width: 90%;
+  height: 90%;
+  line-height: 1.5;
+  padding: 16px 80px;    
+  border-radius: 0.7rem;
+}
+.show-modal1{
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1.0);    
+}
+ /* modal3 */
+.modal3{
+  z-index:1;
+  position: fixed;
+  top:0;
+  left:0;
+  padding:0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(1.1);
+  transition: visibility 0.25s ease-in-out , opacity 0.25s ease-in-out, transform 0.25s ease-in-out;   
+}
+.modal3-content{
+    
+  overflow:auto;
+  width: 90%;
+  height: 90%;
+  line-height: 1.5;
+  padding: 16px 80px;    
+  border-radius: 0.7rem;
+}
+.show-modal3{
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1.0);    
+}
+ /* modal4 */
+.modal4{
+  z-index:1;
+  position: fixed;
+  top:0;
+  left:0;
+  padding:0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(1.1);
+  transition: visibility 0.25s ease-in-out , opacity 0.25s ease-in-out, transform 0.25s ease-in-out;   
+}
+.modal4-content{
+    
+  overflow:auto;
+  width: 90%;
+  height: 90%;
+  line-height: 1.5;
+  padding: 16px 80px;    
+  border-radius: 0.7rem;
+}
+.show-modal4{
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1.0);    
+}
+
+
+.close-button{
+  position: absolute;
+   right: 0;
+   margin-right: 40px;
+   width: 24px;
+   line-height: 24px;
+   text-align: center;
+   cursor: pointer;
+   border-radius: 0.25rem;
+   background-color: lightgray;
+}
+.close-button:hover{
+    background-color: rgb(167, 19, 19);
+}
+  .btn-saiba-mais {
+    display: inline-block;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+  
+  .btn-saiba-mais:hover {
+    background-color: #555;
+  }
+  
+  .info-saiba-mais {
+    display: none;
+    background-color: #eee;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+  }
+  
+  .info-saiba-mais p {
+    margin: 0;
+  }
+
+
+  h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #333;
+    margin-top: 5px;
+  }
+  
+  p {
+    font-size: 18px;
+    line-height: 1.5;
+    color: #666;
+  }
+  
+  /* Estilos para a seção "Git" */
+  #git {
+    background-color: #f5f5f5;
+    padding: 40px;
+    border-radius: 0.5rem;
+  }
+  
+  #git h2 {
+    color: #333;
+  }
+  
+  #git p {
+    color: #666;
+  }
+  
+  /* Estilos para a seção "Gitflow" */
+  #gitflow {
+    background-color: #f0f0f0;
+    padding: 40px;
+    border-radius: 0.5rem;
+  }
+  
+  #gitflow h2 {
+    color: #333;
+  }
+  
+  #gitflow p {
+    color: #666;
+  }
+  
+  /* Estilos para a seção "Docker" */
+  #docker {
+    background-color: #e5e5e5;
+    padding: 40px;
+    border-radius: 0.5rem;
+  }
+  
+  #docker h2 {
+    color: #333;
+  }
+  
+  #docker p {
+    color: #666;
+  }
+  
+  /* Estilos para a seção "CI/CD" */
+  #cicd {
+    background-color: #e0e0e0;
+    padding: 40px;
+    border-radius: 0.5rem;
+  }
+  
+  #cicd h2 {
+    color: #333;
+  }
+  
+  #cicd p {
+    color: #666;
+  }
+  
+  /* Estilos para a seção "Computação em Nuvem" */
+  #computacao-nuvem {
+    background-color: #d5d5d5;
+    padding: 40px;
+    border-radius: 0.5rem;
+  }
+  
+  #computacao-nuvem h2 {
+    color: #333;
+  }
+  
+  #computacao-nuvem p {
+    color: #666;
+  }
+  
+  p {
+    font-size: 18px;
+    line-height: 1.5;
+  }
+
+
+
+
+
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+  }
+
+  footer p {
+    margin: 0;
+  }
+  
+
+
