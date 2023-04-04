@@ -1,17 +1,3 @@
-
-
-
-@media screen and (max-width: 768px) {
-.imgModal img {
-  width: 100%;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-}
-
-
-
-
 @media only screen and (max-width: 768px) {
 
   .navbar {
@@ -61,6 +47,11 @@
   width: 100%;
   height: 100%;
   border-radius: 0;
+  }
+  .imgModal img {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
   }
 
